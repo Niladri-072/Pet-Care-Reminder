@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Reminder</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="reminderManager.js"></script>
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Pet Care Reminder</h1>
+            <p>Set reminders for your pet's care activities</p>
+        </div>
+
+        <!-- Reminder Form -->
+        <div class="reminder-form">
+            <label for="reminder-name">Reminder Name:</label>
+            <input type="text" id="reminder-name" placeholder="e.g., Feeding, Walk" />
+
+            <label for="reminder-time">Reminder Time:</label>
+            <input type="time" id="reminder-time" />
+
+            <button id="set-reminder-btn">Set Reminder</button>
+
+        </div>
+
+        <!-- Reminders Display -->
+        <div class="reminder-list">
+            <h2>Your Reminders:</h2>
+            <ul id="reminder-list-items">
+                <!-- Dynamic reminder list will be inserted here -->
+            </ul>
+        </div>
+
+        <!-- Reminder Display Box: Shows the latest reminder -->
+        <div id="reminder-box" class="reminder-box" style="display: none;">
+            <p><strong>Reminder set:</strong> <span id="reminder-detail"></span></p>
+            <button onclick="deleteReminder()">Delete Reminder</button>
+        </div>
+    </div>
+</body>
+</html>
